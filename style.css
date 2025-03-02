@@ -1,0 +1,67 @@
+body{
+    margin: auto;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.cup{
+    height: 220px;
+    width: 160px;
+    background-color: #fff;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.top-cup{
+    position: relative;
+    top: -9%;
+    background: #6F4E37;
+    height: 15%;
+    border-radius: 50%;
+}
+
+.handle{
+    position: relative;
+    right: -80px;
+    top: 10px;
+    width: 90px;
+    height: 100px;
+    border: 20px solid #fff;
+    border-left: 20px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-radius: 50%;
+    transform: rotate(40deg);
+}
+
+.vapour{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    animation: animate 2s linear infinite;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+#vaps{
+    background-color: rgba(128, 128, 128, 0.726);
+    height: 70px;
+    width: 20px;
+    border-radius: 40%;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-150px) scale(2);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-300px) scale(2);
+    }
+}
